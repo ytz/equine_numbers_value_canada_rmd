@@ -1,6 +1,8 @@
 ---
 title: "Historical horse population in Canada"
 bibliography: horse_refs.bib
+params:
+  province: "Alberta"
 output: github_document
 ---
 
@@ -81,4 +83,4 @@ province_plot
 
 Figure 2. Horse populations for \`r params$province\` between 1940 - 1972.
 
-**\# References**
+# **References**
