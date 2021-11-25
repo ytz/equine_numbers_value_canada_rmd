@@ -5,6 +5,7 @@ output: github_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+library(knitr)
 library(tidyverse)
 ```
 
@@ -62,7 +63,7 @@ knitr::kable(max_horses, caption = "Table 1. Range of the number of horses for e
 
 Below we zoom in and look at the province of Alberta:
 
-```{r plot province, fig.width=5, fig.height=4, fig.cap = "Historical number of horses per province in Canada" + out.width = '100%'}
+```{r plot province, fig.width=5, fig.height=4}
 province_plot <- horse_pop %>% 
   filter(GEO == "Alberta") %>% 
   ggplot(aes(x = Ref_Date, y = Value)) +
@@ -76,3 +77,5 @@ province_plot <- horse_pop %>%
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 province_plot
 ```
+
+Figure 2. Horse populations for \`r params$province\` between 1940 - 1972.
